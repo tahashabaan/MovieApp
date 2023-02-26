@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/app.css">
+  <title>Movie App</title>
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+
+  <div id="backdrop" class="invisible"></div>
+  <div 
+    class="modal card invisible" 
+    id="add-modal">
+    <div class="modal__content" >
+
+        <label for="title">Movie Title</label>
+        <input type="text" name="title" id="title" />
+
+        <label for="image-url">Image URL</label>
+        <input type="url" name="image-url" id="image-url" />
+
+        <label for="rating">Your Rating</label>
+        <input 
+          type="number" 
+          id="rating" 
+          min="1" 
+          max="5" 
+          step="1"/>
+
+    </div>
+
+    <div class="modal__actions">
+      <button class="btn btn--passive">Cancel</button>
+      <button class="btn btn--success">Add</button>
+    </div>
+
+  </div> <!-- modal 1-->
+
+  <div 
+     class="modal card invisible"    id="delete-modal" >
+     
+    <h2 class="modal__title">Are you sure?</h2>
+    <p class="modal__content">
+      Are you sure you want to delete this item? This action can't be made
+      undone!
+    </p>
+    <div class="modal__actions" >
+      <button class="btn btn--passive">No (Cancel)</button>
+      <button class="btn btn--danger">Yes</button> 
+    </div>
+  </div>
+
+
+     <header>
+       <h1>Favorite Movies</h1>
+       <button>ADD MOVIE</button>
+     </header>
+    
+    <main>
+      <section id="entry-text" class="card">
+         <p>Your personal movie database!</p>
+      </section>
+      <ul id="movie-list"></ul>
+    </main>
+
+  
+</body>
+</html>
